@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>应用页面</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="top-bar"></div>
+  
+  <div class="container">
+    <div class="title">常用应用</div>
+    
+    <div class="app-container">
+      <div class="app">
+        <div class="appLogo"></div>
+        <span class="name1">应用名</span><br>
+        <span class="info">应用描述.....</span>
+      </div>
+      <div class="app">
+        <div class="appLogo"></div>
+        <span class="name1">应用名</span><br>
+        <span class="info">应用描述.....</span>
+      </div>
+      <div class="app">
+        <div class="appLogo"></div>
+        <span class="name1">应用名</span><br>
+        <span class="info">应用描述.....</span>
+      </div>
+      <div class="app">
+        <div class="appLogo"></div>
+        <span class="name1">应用名</span><br>
+        <span class="info">应用描述.....</span>
+      </div>
+    </div>
+    
+    <div class="title">应用列表</div>
+    
+    <div class="search-box">
+      <input type="text" class="search-input" placeholder="搜索应用" id="myInput" onkeyup="searchApp()">
+      <button class="sortButton" onclick="sortTableByTimeDescending()">按时间倒序</button>
+      <button class="create-button" onclick="toggleCreat()">新建</button>
+    </div>
+    
+    <table id="appTable">
+      <thead>
+        <tr>
+          <th>应用名称</th>
+          <th>描述</th>
+          <th>上传时间</th>
+          <th>图标</th>
+        </tr>
+      </thead>
+      <tbody id="appTableBody">
+        <tr>
+          <td>应用1</td>
+          <td>这是应用1的描述</td>
+          <td>2023-10-18</td>
+          <td><img src="AppLogo.png" alt="应用1图标" width="30"></td>
+        </tr>
+        <tr>
+          <td>应用2</td>
+          <td>这是应用2的描述</td>
+          <td>2023-10-30</td>
+          <td><img src="AppLogo.png" alt="应用2图标" width="30"></td>
+        </tr>
+        <tr>
+            <td>应用3</td>
+            <td>这是应用3的描述</td>
+            <td>2023-10-12</td>
+            <td><img src="AppLogo.png" alt="应用3图标" width="30"></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div id="creat" class = "creat">
+        <input type="text" placeholder="输入应用名" id="appNameInput">
+        <textarea placeholder="输入描述" id="appDescInput"></textarea>
+        <input type="date" placeholder="选择日期" id="appDateInput">
+        <input type="file" accept="image/*" id="appIconInput">
+        <div class="buttons">
+            <button class="cancel-button">取消</button>
+            <button class="submit-button" onclick="addApp()">提交</button>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+</body>
+<script src="index.js"></script>
+</html>
